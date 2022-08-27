@@ -121,7 +121,7 @@
 
     --// Ui Tab Button 
     ATab:AddButton({
-    Name = "INFINITE KARMA[DOESN'T",
+    Name = "INFINITE KARMA[NOT WORKING]",
     Default = false,
     Callback = function()
     A()
