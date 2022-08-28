@@ -1,3 +1,7 @@
+    rconsoleprint("Made By Menace#6742")
+    
+    task.wait(1)
+
     --// Global Variables 
     getgenv().settings = {
     A = false,
