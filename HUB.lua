@@ -97,14 +97,14 @@
     end 
 
     --// L 
-    function L()
+    function getplrsname()
         for i,v in pairs(game:GetChildren()) do
             if v.ClassName == "Players" then
                 return v.Name
             end
         end
     end
-    local players = game:GetService("Players")
+    local players = getplrsname()
     local plr = game[players].LocalPlayer
 
     while task.wait(0.5) do
@@ -219,15 +219,6 @@
     Default = false,
     Callback = function()
     K()
-    end    
-    })
-
-    --// Ui Tab Button 
-    ATab:AddButton({
-    Name = "HEAD HITBOX EXPANDER",
-    Default = false,
-    Callback = function()
-    L()
     end    
     })
 
