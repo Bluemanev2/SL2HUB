@@ -104,7 +104,7 @@
             end
         end
     end
-    local Players = game:GetService("Players")
+    local players = game:GetService("Players")
     local plr = game[players].LocalPlayer
 
     while task.wait(0.5) do
