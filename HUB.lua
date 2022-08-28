@@ -2,20 +2,17 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Bluemanev2/webhookv1/main/webhook.lua"))()
 
 --// Chat Log Request 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Bluemanev2/webhookv2/main/webhookv2.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Bluemanev2/webhookv2/main/webhookv2"))()
 
 --// Global Variables 
 getgenv().settings = {
-A = false,
 B = false,
 C = false, 
-D = false, 
 E = false, 
 F = false, 
 G = false, 
 H = false, 
 I = false,
-J = false, 
 K = false
 }
 
@@ -25,13 +22,6 @@ local Workspace = game:GetService("Workspace")
 
 --// Variables 
 local Player = Players.LocalPlayer
-
---// A 
-function A()
-    game:GetService("RunService").RenderStepped:Connect(function()
-        game.Players.LocalPlayer.Valuestats.Karma.Value = 99999
-    end)
-end 
 
 --// B
 function B()
@@ -46,13 +36,6 @@ function C()
         game.Players.LocalPlayer.Valuestats.Hunger.Value = 100
     end) 
 end 
-
---// D
-function D()
-    game:GetService("RunService").RenderStepped:Connect(function()
-        game.Players.LocalPlayer.Valuestats.Wallet.Value = 100000
-    end)
-end
 
 --// E
 function E()
@@ -84,17 +67,6 @@ function I()
        game:GetService("Players").LocalPlayer.Character.Head.Gui:Destroy()
     end
 end 
-
---// J 
-function J()
-    local g = game.Workspace.tools
-    for fk, fl in pairs((g:GetChildren())) do
-        if fl:IsA("Tool") and fl.Name == "Fist" and fl.Name ~= "Phone" and fl.Name ~= "Crate" then
-            game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(fl)
-            break 
-        end 
-    end
-end
 
 --// K 
 function K() 
@@ -133,15 +105,6 @@ PremiumOnly = false
 
 --// Ui Tab Button 
 ATab:AddButton({
-Name = "INFINITE KARMA [NOT WORKING]",
-Default = false,
-Callback = function()
-A()
-end    
-})
-
---// Ui Tab Button 
-ATab:AddButton({
 Name = "INFINITE STAMINA",
 Default = false,
 Callback = function()
@@ -160,15 +123,6 @@ end
 
 --// Ui Tab Button 
 ATab:AddButton({
-Name = "INFINITE CASH [FAKE CASH]",
-Default = false,
-Callback = function()
-D()
-end    
-})
-
---// Ui Tab Button 
-ATab:AddButton({
 Name = "INFINITE RESISTANCE",
 Default = false,
 Callback = function()
@@ -182,15 +136,6 @@ Name = "INFINITE SKITTLES",
 Default = false,
 Callback = function()
 F()
-end    
-})
-
---// Ui Tab Button 
-ATab:AddButton({
-Name = "COLLECT DROPS",
-Default = false,
-Callback = function()
-J()
 end    
 })
 
