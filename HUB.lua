@@ -1,5 +1,5 @@
-    --// Global Variables 
-getgenv().settings = {
+     --// Global Variables 
+    getgenv().settings = {
     A = false,
     B = false,
     C = false, 
@@ -10,7 +10,8 @@ getgenv().settings = {
     H = false, 
     I = false,
     J = false, 
-    K = false 
+    K = false, 
+    L = false 
     }
     
     --// Services 
@@ -95,6 +96,31 @@ getgenv().settings = {
         loadstring(game:HttpGet("https://pastebin.com/raw/mfrMFUcJ"))()
     end 
 
+    --// L 
+    function L()
+    function getplrsname()
+        for i,v in pairs(game:GetChildren()) do
+            if v.ClassName == "Players" then
+                return v.Name
+            end
+        end
+    end
+    local players = getplrsname()
+    local plr = game[players].LocalPlayer
+
+    while task.wait(0.5) do
+        coroutine.resume(coroutine.create(function()
+            for _,v in pairs(game[players]:GetPlayers()) do
+                if v.Name ~= plr.Name and v.Character then
+                    v.Character.Head.CanCollide = false
+                    v.Character.Head.Material = "Plastic"
+                    v.Character.Head.Transparency = 0.5
+                    v.Character.Head.Size = Vector3.new(4.1, 4.1, 4.1)
+                end
+            end
+        end))
+    end
+
     --// Game ID
     if game.PlaceId == 4779613061 then 
 
@@ -127,7 +153,7 @@ getgenv().settings = {
 
     --// Ui Tab Button 
     ATab:AddButton({
-    Name = "INFINITE KARMA[NOT WORKING]",
+    Name = "INFINITE KARMA [NOT WORKING]",
     Default = false,
     Callback = function()
     A()
@@ -154,7 +180,7 @@ getgenv().settings = {
 
     --// Ui Tab Button 
     ATab:AddButton({
-    Name = "INFINITE CASH[FAKE CASH]",
+    Name = "INFINITE CASH [FAKE CASH]",
     Default = false,
     Callback = function()
     D()
@@ -190,10 +216,19 @@ getgenv().settings = {
 
     --// Ui Tab Button 
     ATab:AddButton({
-    Name = "FREE CAMERA[OP]",
+    Name = "FREE CAMERA [OP]",
     Default = false,
     Callback = function()
     K()
+    end    
+    })
+
+    --// Ui Tab Button 
+    ATab:AddButton({
+    Name = "HEAD HITBOX EXPANDER",
+    Default = false,
+    Callback = function()
+    L()
     end    
     })
 
