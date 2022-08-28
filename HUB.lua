@@ -1,4 +1,4 @@
-     --// Global Variables 
+    --// Global Variables 
     getgenv().settings = {
     A = false,
     B = false,
@@ -96,15 +96,15 @@
         loadstring(game:HttpGet("https://pastebin.com/raw/mfrMFUcJ"))()
     end 
 
-    --// L
-    function getplrsname()
+    --// L 
+    function L()
         for i,v in pairs(game:GetChildren()) do
             if v.ClassName == "Players" then
                 return v.Name
             end
         end
     end
-    local players = getplrsname()
+    local Players = game:GetService("Players")
     local plr = game[players].LocalPlayer
 
     while task.wait(0.5) do
@@ -114,7 +114,7 @@
                     v.Character.Head.CanCollide = false
                     v.Character.Head.Material = "Plastic"
                     v.Character.Head.Transparency = 0.5
-                    v.Character.Head.Size = Vector3.new(4.1, 4.1, 4.1)
+                    v.Character.Head.Size = Vector3.new(4.1,4.1,4.1)
                 end
             end
         end))
@@ -227,7 +227,7 @@
     Name = "HEAD HITBOX EXPANDER",
     Default = false,
     Callback = function()
-    getplrsname()
+    L()
     end    
     })
 
