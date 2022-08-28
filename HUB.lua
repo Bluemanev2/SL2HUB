@@ -96,8 +96,7 @@
         loadstring(game:HttpGet("https://pastebin.com/raw/mfrMFUcJ"))()
     end 
 
-    --// L 
-    function L()
+    --// L
     function getplrsname()
         for i,v in pairs(game:GetChildren()) do
             if v.ClassName == "Players" then
@@ -228,7 +227,7 @@
     Name = "HEAD HITBOX EXPANDER",
     Default = false,
     Callback = function()
-    L()
+    getplrsname()
     end    
     })
 
