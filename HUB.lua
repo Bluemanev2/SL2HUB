@@ -1,5 +1,5 @@
     --// Global Variables 
-    getgenv().settings = {
+getgenv().settings = {
     A = false,
     B = false,
     C = false, 
@@ -9,7 +9,8 @@
     G = false, 
     H = false, 
     I = false,
-    J = false
+    J = false, 
+    K = false 
     }
     
     --// Services 
@@ -88,6 +89,11 @@
             end 
         end
     end
+
+    --// K 
+    function K() 
+        loadstring(game:HttpGet("https://pastebin.com/raw/mfrMFUcJ"))()
+    end 
 
     --// Game ID
     if game.PlaceId == 4779613061 then 
@@ -179,6 +185,15 @@
     Default = false,
     Callback = function()
     J()
+    end    
+    })
+
+    --// Ui Tab Button 
+    ATab:AddButton({
+    Name = "FREE CAMERA[OP]",
+    Default = false,
+    Callback = function()
+    K()
     end    
     })
 
